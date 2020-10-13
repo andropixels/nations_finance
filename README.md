@@ -20,6 +20,8 @@ Open a Terminal tab and start the ganache (Keep it running)
 
 `ganache-cli`
 
+**Note**: use node version 12 or you may get the following error: `Error: Callback was already called.`
+
 To deploy all the contracts in local blockchain: 
 
 `truffle migrate`
