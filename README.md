@@ -29,3 +29,15 @@ To deploy all the contracts in local blockchain:
 To Test 
 
 `truffle test`
+
+To check for gas price optimization 
+
+uncomment the the following lines in truffle-config.js:
+
+```
+  mocha: {
+    // reporter: 'eth-gas-reporter',
+    // timeout: 100000
+  },
+
+```
