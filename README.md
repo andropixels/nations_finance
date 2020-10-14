@@ -30,9 +30,7 @@ To Test
 
 `truffle test`
 
-To check for gas price optimization 
-
-uncomment the the following lines in truffle-config.js:
+To check for gas price optimization, uncomment the the following lines in truffle-config.js:
 
 ```
   mocha: {
