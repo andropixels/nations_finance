@@ -10,7 +10,9 @@ Nations.finance is an experimental strategy game backed by cryptocurrency, where
 
 Made with ❤️ and developed for the [ETHOnline Hackathon 2020](https://hack.ethglobal.co/showcase/nations-finance-recNHZu842Z49C3yk). 
 
-### Starting the app in development 
+The Gameplay is heavily inspired by [Nation States](https://www.nationstates.net/) and the contract architecture is by the Aavegotchi Project.
+
+## Starting the app in development 
 
 Install Ganache cli globally: 
 
@@ -39,3 +41,12 @@ To check for gas price optimization, uncomment the the following lines in truffl
   },
 
 ```
+===
+
+## Code Explanation 
+
+### The Contract 
+
+We use Nick Mudge's the [diamond-2](https://github.com/mudgen/diamond-2) implementation of [EIP-2535 Diamond Standard](https://eips.ethereum.org/EIPS/eip-2535) for this repository. 
+
+### ThE FrontEnd 
