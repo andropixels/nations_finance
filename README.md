@@ -49,4 +49,4 @@ To check for gas price optimization, uncomment the the following lines in truffl
 
 We use Nick Mudge's the [diamond-2](https://github.com/mudgen/diamond-2) implementation of [EIP-2535 Diamond Standard](https://eips.ethereum.org/EIPS/eip-2535) for this repository. 
 
-### ThE FrontEnd 
+### The FrontEnd 

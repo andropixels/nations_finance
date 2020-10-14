@@ -125,6 +125,11 @@ contract('DiamondTest', async (accounts) => {
     assert.sameMembers(result, selectors)
   })
 
+  it('should have four facets -- after Test Facet 1 is added', async () => {
+    let facetAddresses = await diamondLoupeFacet.methods.facetAddresses().call();
+    assert.equal(facetAddresses.length, 4)
+  })
+
   it('should test function call', async () => {
     const test1FacetDiamond = new web3.eth.Contract(Test1Facet.abi, diamond.address)
     await test1FacetDiamond.methods.test1Func10().send({ from: web3.eth.defaultAccount, gas: 1000000 })
@@ -147,6 +152,11 @@ contract('DiamondTest', async (accounts) => {
       .send({ from: web3.eth.defaultAccount, gas: 1000000 })
     result = await diamondLoupeFacet.methods.facetFunctionSelectors(addresses[4]).call()
     assert.sameMembers(result, selectors)
+  })
+
+  it('should have five facets -- after Test Facet 2 is added', async () => {
+    let facetAddresses = await diamondLoupeFacet.methods.facetAddresses().call();
+    assert.equal(facetAddresses.length, 5)
   })
 
   it('should remove some test2 functions', async () => {
