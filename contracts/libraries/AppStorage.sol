@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.7.1;
 
-struct Trait {
+struct Traits {
   uint8 economicFreedom;
   uint8 politicalFreedom;
   uint8 personalFreedom;
@@ -15,15 +15,16 @@ struct Trait {
 
 struct Nation {
   uint8 share;
-  uint256 collateral;
   string name;
-  Trait numericTraits;
+  Traits traits;
   address owner;
+  uint256 collateral;
 }
 
 struct AppStorage {
   mapping(uint256 => Nation) nations;
   mapping(string => bool) nationNamesUsed;
+  uint32 totalSupply;
   address contractOwner;
   address totalCollateral;
 }
